@@ -18,9 +18,7 @@ public class SchoolSystem {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList STDschedual=new ArrayList<String>();
-        STDschedual.add("MATH-101");
-        STDschedual.add("HISTORY-404");
-        STDschedual.add("ENGLISH-202");
+  
         //taking course name from the user (teacher,adminstrator,student)
         Scanner user=new Scanner(System.in);
         System.out.print("please enter name of the course you wish to add in your schedual: ");
