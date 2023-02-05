@@ -24,7 +24,7 @@ public class SchoolSystem {
             System.out.println("----------------------------------------------");
             System.out.println("1. ADD COURSE TO STUDENT SCHEDUAL ");
             System.out.println("2. DELETE COURSE TO STUDENT SCHEDUAL ");
-            System.out.println("3. VEIW COURSES TO REGISTOR");
+            System.out.println("3. VIEW COURSES TO REGISTOR");
             System.out.println("4. ");
             System.out.println("5. EXIT");
             System.out.println("----------------------------------------------");
@@ -39,6 +39,9 @@ public class SchoolSystem {
 
                 //sending to add course method in school function class
             } else if (selection == 2) {
+                System.out.print("Please Enter the name of the course you wish to delete: ");
+                courseName=user.next();
+                 SchoolFunctions.DELETECOURSE(STDschedual, courseName);
 
             } else if (selection == 3) {
 
