@@ -8,6 +8,7 @@ public class SchoolSystem {
         //variables to send to methods 
         ArrayList STDschedual = new ArrayList<String>();
         String courseName;
+        int grade;
         //taking id and pass from user 
         Scanner user = new Scanner(System.in);
         System.out.print("Please enter your ID: ");
@@ -20,12 +21,14 @@ public class SchoolSystem {
 
         //manue 
         for (int i = 1; i > 0; i++) {
+            System.out.println("");
+            System.out.println("----------------------------------------------");
             System.out.println("Please select from the following: ");
             System.out.println("----------------------------------------------");
             System.out.println("1. ADD COURSE TO STUDENT SCHEDUAL ");
             System.out.println("2. DELETE COURSE TO STUDENT SCHEDUAL ");
             System.out.println("3. VIEW COURSES TO REGISTOR");
-            System.out.println("4. ");
+            System.out.println("4. VIEW STUDENTS RECORDS");
             System.out.println("5. EXIT");
             System.out.println("----------------------------------------------");
 
@@ -44,6 +47,9 @@ public class SchoolSystem {
                  SchoolFunctions.DELETECOURSE(STDschedual, courseName);
 
             } else if (selection == 3) {
+                System.out.print("please enter number of grade you wish to view it's courses: ");
+                grade=user.nextInt();
+                SchoolFunctions.VIEWCOURSES(grade);
 
             } else if (selection == 4) {
 
