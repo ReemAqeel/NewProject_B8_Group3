@@ -28,7 +28,7 @@ public class SchoolSystem {
             System.out.println("1. ADD COURSE TO STUDENT SCHEDUAL ");
             System.out.println("2. DELETE COURSE TO STUDENT SCHEDUAL ");
             System.out.println("3. VIEW COURSES TO REGISTOR");
-            System.out.println("4. VIEW STUDENTS RECORDS");
+            System.out.println("4. VIEW STUDENTS SCHEDULE");
             System.out.println("5. EXIT");
             System.out.println("----------------------------------------------");
 
@@ -52,6 +52,12 @@ public class SchoolSystem {
                 SchoolFunctions.VIEWCOURSES(grade);
 
             } else if (selection == 4) {
+                if(STDschedual.isEmpty()){
+                    System.out.println("Student has not registor for any course yet ");
+                }else{
+                System.out.println("Student current schedual is: ");
+                SchoolFunctions.print(STDschedual);
+                }
 
             } else if (selection == 5) {
                 System.out.println("Thank you for using our system, have a nice day :)");
